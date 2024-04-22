@@ -33,23 +33,23 @@ class GlassContent extends StatelessWidget {
                 style: Theme.of(context)
                     .textTheme
                     .headlineSmall!
-                    .copyWith(color: Colors.white),
+                    .copyWith(color: Colors.red),
               ),
               Text(
                 "Codespec \nSolutions Pvt. Ltd.",
                 style: TextStyle(
-                  fontSize: 100,
+                  fontSize: 80,
                   fontWeight: FontWeight.bold,
-                  color: Colors.white,
+                  color: Colors.red,
                   height: 1.5,
                 ),
               ),
               Text(
-                "for web and mobile app development \n Collabration with governments, startups, and corporates",
+                " For web and mobile app development \n Collabration with governments, startups, and corporates",
                 style: Theme.of(context)
                     .textTheme
                     .headlineSmall!
-                    .copyWith(color: Colors.white),
+                    .copyWith(color: Colors.red),
               )
             ],
           ),

@@ -12,7 +12,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'codespec 💻', // add an emoji to the title
+
+
+
       theme: ThemeData(
         inputDecorationTheme: kDefaultInputDecorationTheme,
         visualDensity: VisualDensity.adaptivePlatformDensity,
