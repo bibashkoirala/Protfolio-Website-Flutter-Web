@@ -23,7 +23,7 @@ class ContactSection extends StatelessWidget {
         children: [
           SizedBox(height: kDefaultPadding * 2.5),
           SectionTitle(
-            title: "Contact Me",
+            title: "Contact Us",
             subTitle: "For Project inquiry and information",
             color: Color(0xFF07E24A),
           ),
@@ -54,28 +54,31 @@ class ContactBox extends StatelessWidget {
       ),
       child: Column(
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              SocalCard(
-                color: Color(0xFFD9FFFC),
-                iconSrc: "assets/images/skype.png",
-                name: 'TheFlutterWay',
-                press: () {},
-              ),
-              SocalCard(
-                color: Color(0xFFE4FFC7),
-                iconSrc: "assets/images/whatsapp.png",
-                name: 'TheFlutterWay',
-                press: () {},
-              ),
-              SocalCard(
-                color: Color(0xFFE8F0F9),
-                iconSrc: "assets/images/messanger.png",
-                name: 'TheFlutterWay',
-                press: () {},
-              ),
-            ],
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                SocalCard(
+                  color: Color(0xFFD9FFFC),
+                  iconSrc: "assets/images/skype.png",
+                  name: 'TheFlutterWay',
+                  press: () {},
+                ),
+                SocalCard(
+                  color: Color(0xFFE4FFC7),
+                  iconSrc: "assets/images/whatsapp.png",
+                  name: 'TheFlutterWay',
+                  press: () {},
+                ),
+                SocalCard(
+                  color: Color(0xFFE8F0F9),
+                  iconSrc: "assets/images/messanger.png",
+                  name: 'TheFlutterWay',
+                  press: () {},
+                ),
+              ],
+            ),
           ),
           SizedBox(height: kDefaultPadding * 2),
           ContactForm(),
