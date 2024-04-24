@@ -23,7 +23,9 @@ class AboutSection extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               _buildAboutTextSection(context),
+              const SizedBox(height: kDefaultPadding * 2),
               _buildExperienceSection(),
+              const SizedBox(height: kDefaultPadding * 2),
               _buildButtons(),
             ],
           ),
@@ -51,18 +53,7 @@ class AboutSection extends StatelessWidget {
   }
 
   Widget _buildExperienceSection() {
-    return ResponsiveWidget.isSmallScreen(context)
-        ? Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              ExperienceCard(numOfExp: "03"),
-              const SizedBox(height: kDefaultPadding),
-              AboutSectionText(
-                text: "Trusted by Rural Municiplities : Aurahi , Chulachuli , Katahari etc.\n People influenced : 50,000+ \n Projects completed : 18+",
-              ),
-            ],
-          )
-        : Row(
+    return Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               ExperienceCard(numOfExp: "03"),
@@ -80,16 +71,22 @@ class AboutSection extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        MyOutlineButton(
-          imageSrc: "assets/images/hand.png",
-          text: "Collabration !",
-          press: () {},
+        Expanded(
+          flex: 2,
+          child: MyOutlineButton(
+            imageSrc: "assets/images/hand.png",
+            text: "Collabration !",
+            press: () {},
+          ),
         ),
         const SizedBox(width: kDefaultPadding * 1.5),
-        DefaultButton(
-          imageSrc: "assets/images/download.png",
-          text: "Download CV",
-          press: () {},
+        Expanded(
+          flex: 3,
+          child: DefaultButton(
+            imageSrc: "assets/images/download.png",
+            text: "Download CV",
+            press: () {},
+          ),
         ),
       ],
     );

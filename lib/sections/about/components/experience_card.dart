@@ -12,11 +12,12 @@ class ExperienceCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double cardWidth = MediaQuery.of(context).size.width >= 700 ? 300 : 200;
     return Container(
       margin: EdgeInsets.symmetric(horizontal: kDefaultPadding),
       padding: EdgeInsets.all(kDefaultPadding),
       height: 220,
-      width: 300,
+      width: cardWidth,
       decoration: BoxDecoration(
         color: Color(0xFFF7E8FF),
         borderRadius: BorderRadius.circular(10),
@@ -80,7 +81,7 @@ class ExperienceCard extends StatelessWidget {
                   style: MediaQuery.of(context).size.width >=
                           MediaQuery.of(context).size.height
                       ? TextStyle(
-                          fontSize: 70,
+                          fontSize: 80,
                           fontWeight: FontWeight.bold,
                           color: Colors.white,
                         )
@@ -98,7 +99,7 @@ class ExperienceCard extends StatelessWidget {
               "Years of Experience",
               style: TextStyle(
                 color: Color(0xFFA600FF),
-                fontSize: MediaQuery.of(context).size.width * 0.015,
+                fontSize: MediaQuery.of(context).size.width * 0.018,
               ),
             )
             

@@ -18,10 +18,16 @@ class ServiceSection extends StatelessWidget {
             title: "Service Offerings",
             subTitle: "My Strong Arenas",
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: List.generate(
-                services.length, (index) => ServiceCard(index: index)),
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: List.generate(
+                  services.length, (index) => ServiceCard(index: index)).map((item) => Padding(
+                padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
+                child: item,
+              )).toList(),
+            ),
           )
         ],
       ),

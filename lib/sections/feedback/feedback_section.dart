@@ -19,12 +19,25 @@ class FeedbackSection extends StatelessWidget {
             color: Color(0xFF00B1FF),
           ),
           SizedBox(height: kDefaultPadding),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: List.generate(
-              feedbacks.length,
-              (index) => FeedbackCard(index: index),
-            ),
+          LayoutBuilder(
+            builder: (context, constraints) {
+              if (constraints.maxWidth < 900) {
+                return Column(
+                  children: List.generate(
+                    feedbacks.length,
+                    (index) => FeedbackCard(index: index),
+                  ),
+                );
+              } else {
+                return Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: List.generate(
+                    feedbacks.length,
+                    (index) => FeedbackCard(index: index),
+                  ),
+                );
+              }
+            },
           ),
         ],
       ),

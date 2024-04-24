@@ -10,17 +10,17 @@ class AboutTextWithSign extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(18.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Text(
-            "About \nmy story",
+            "About \nOur story",
             style: MediaQuery.of(context).size.width > 600
                 ? Theme.of(context).textTheme.displayMedium!.copyWith(
-                      fontWeight: FontWeight.bold, color: Colors.black, fontSize: 50)
+                      fontWeight: FontWeight.bold, color: Colors.black, fontSize: 80)
                 : Theme.of(context).textTheme.displayMedium!.copyWith(
-                      fontWeight: FontWeight.bold, color: Colors.black, fontSize: 18),
+                      fontWeight: FontWeight.bold, color: Colors.black, fontSize: 30),
           ),
           SizedBox(height: kDefaultPadding * 2),
            Image.asset("assets/images/sign.png")
