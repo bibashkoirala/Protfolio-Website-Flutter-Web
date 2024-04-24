@@ -9,19 +9,23 @@ class AboutTextWithSign extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          "About \nmy story",
-          style: Theme.of(context)
-              .textTheme
-              .displayMedium!
-              .copyWith(fontWeight: FontWeight.bold, color: Colors.black),
-        ),
-        SizedBox(height: kDefaultPadding * 2),
-        Image.asset("assets/images/sign.png")
-      ],
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Text(
+            "About \nmy story",
+            style: MediaQuery.of(context).size.width > 600
+                ? Theme.of(context).textTheme.displayMedium!.copyWith(
+                      fontWeight: FontWeight.bold, color: Colors.black, fontSize: 50)
+                : Theme.of(context).textTheme.displayMedium!.copyWith(
+                      fontWeight: FontWeight.bold, color: Colors.black, fontSize: 18),
+          ),
+          SizedBox(height: kDefaultPadding * 2),
+           Image.asset("assets/images/sign.png")
+        ],
+      ),
     );
   }
 }

@@ -20,23 +20,27 @@ class _MenuState extends State<Menu> {
   ];
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.symmetric(horizontal: kDefaultPadding * 2.5),
-      constraints: BoxConstraints(maxWidth: 1110),
-      height: 100,
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(10),
-          topRight: Radius.circular(10),
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Container(
+        
+        padding: EdgeInsets.symmetric(horizontal: kDefaultPadding * 2.5),
+        constraints: BoxConstraints(maxWidth: 1110),
+        height: 100,
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(10),
+            topRight: Radius.circular(10),
+          ),
+          boxShadow: [kDefaultShadow],
         ),
-        boxShadow: [kDefaultShadow],
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: List.generate(
-          menuItems.length,
-          (index) => buildMenuItem(index),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: List.generate(
+            menuItems.length,
+            (index) => buildMenuItem(index),
+          ),
         ),
       ),
     );
@@ -85,3 +89,4 @@ class _MenuState extends State<Menu> {
         ),
       );
 }
+

@@ -19,7 +19,7 @@ class LogoAndBlurBox extends StatelessWidget {
           padding: const EdgeInsets.only(left: 18.0),
           child: Image.asset("assets/images/hand.png"),
         ),
-        Spacer(),
+        // Spacer(),
         GlassContent(size: size),
         Spacer(flex: 3),
       ],

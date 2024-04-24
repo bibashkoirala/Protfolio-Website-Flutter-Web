@@ -9,10 +9,10 @@ import 'components/person_pic.dart';
 class TopSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
+    Size size = MediaQuery.of(context).size ;
     return Container(
       alignment: Alignment.center,
-      constraints: BoxConstraints(maxHeight: 900, minHeight: 700),
+      constraints: BoxConstraints(maxHeight: 600, minHeight: 400),
       width: double.infinity,
       decoration: BoxDecoration(
         image: DecorationImage(
@@ -21,7 +21,7 @@ class TopSection extends StatelessWidget {
         ),
       ),
       child: Container(
-        margin: EdgeInsets.only(top: kDefaultPadding),
+         margin: EdgeInsets.only(top: kDefaultPadding),
         width: 1200,
         child: Stack(
           children: [
@@ -33,11 +33,27 @@ class TopSection extends StatelessWidget {
             ),
             Positioned(
               bottom: 0,
-              child: Menu(),
+              left: kDefaultPadding * 2,
+              right: kDefaultPadding * 2,
+              child: LayoutBuilder(
+                builder: (context, constraints) {
+                  if (constraints.maxWidth < 400) {
+                    return Center(
+                      child: Menu(),
+                    );
+                  } else {
+                    return Align(
+                      alignment: Alignment.bottomRight,
+                      child: Menu(),
+                    );
+                  }
+                },
+              ),
             ),
           ],
         ),
       ),
     );
+    
   }
 }

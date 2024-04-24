@@ -21,7 +21,7 @@ class GlassContent extends StatelessWidget {
         child: Container(
           padding: EdgeInsets.symmetric(horizontal: kDefaultPadding * 2),
           constraints:
-              BoxConstraints(maxWidth: 1110, maxHeight: size.height * 0.7),
+              BoxConstraints(maxWidth: 1110, maxHeight: size.height * 0.6),
           width: double.infinity,
           color: Colors.white.withOpacity(0),
           child: Column(
@@ -37,20 +37,36 @@ class GlassContent extends StatelessWidget {
               ),
               Text(
                 "Codespec \nSolutions Pvt. Ltd.",
-                style: TextStyle(
-                  fontSize: 80,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.red,
-                  height: 1.5,
-                ),
+                style: MediaQuery.of(context).size.width > 700
+                    ? TextStyle(
+                        fontSize: 70,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.red,
+                        height: 1.5,
+                      )
+                    : TextStyle(
+                        fontSize: 40,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.red,
+                        height: 1.5,
+                      ),
               ),
               Text(
                 " For web and mobile app development \n Collabration with governments, startups, and corporates",
-                style: Theme.of(context)
-                    .textTheme
-                    .headlineSmall!
-                    .copyWith(color: Colors.red),
-              )
+                style: MediaQuery.of(context).size.width > 700
+                    ? TextStyle(
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                        height: 1.5,
+                      )
+                    : TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                        height: 1.5,
+                      ),
+              ),
             ],
           ),
         ),
