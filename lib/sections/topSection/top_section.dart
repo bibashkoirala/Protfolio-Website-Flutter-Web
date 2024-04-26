@@ -39,12 +39,12 @@ class TopSection extends StatelessWidget {
                 builder: (context, constraints) {
                   if (constraints.maxWidth < 400) {
                     return Center(
-                      child: Menu(),
+                      child: Menu(scrollController: ScrollController(),),
                     );
                   } else {
                     return Align(
                       alignment: Alignment.bottomRight,
-                      child: Menu(),
+                      child: Menu(scrollController: ScrollController(),),
                     );
                   }
                 },

@@ -69,7 +69,7 @@ class _FeedbackCardState extends State<FeedbackCard> {
             ),
             SizedBox(height: kDefaultPadding * 2),
             Text(
-              "Ronald Thompson",
+              "Rabin Parajuli",
               style: TextStyle(fontWeight: FontWeight.bold),
             )
           ],

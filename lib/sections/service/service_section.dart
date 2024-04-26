@@ -16,7 +16,7 @@ class ServiceSection extends StatelessWidget {
           SectionTitle(
             color: Color(0xFFFF0000),
             title: "Service Offerings",
-            subTitle: "My Strong Arenas",
+            subTitle: "Our Strong Arenas",
           ),
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,

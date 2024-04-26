@@ -16,12 +16,63 @@ class HomeScreen extends StatelessWidget {
           children: [
             TopSection(),
             SizedBox(height: kDefaultPadding * 2),
-            AboutSection(),
-            ServiceSection(),
-            RecentWorkSection(),
-            FeedbackSection(),
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => AboutSection(),
+                  ),
+                );
+              },
+              child: AboutSection(),
+            ),
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ServiceSection(),),
+                );
+                
+              },
+              child: ServiceSection(),
+            ),
+
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => RecentWorkSection(),
+                  ),
+                );
+              },
+              child: RecentWorkSection(),
+            ),
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => FeedbackSection(),
+                  ),
+                );
+              },
+              child: FeedbackSection(),
+            ),
             SizedBox(height: kDefaultPadding),
-            ContactSection(),
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ContactSection(),
+                  ),
+                );
+              },
+              child: ContactSection(),
+            ),
             // This SizeBox just for demo
             // SizedBox(
             //   height: 500,
